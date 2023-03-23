@@ -5,7 +5,6 @@ CeramicPlate.png
 Colandar.png
 FoodProcessor.png
 FryingPan.png
-GeorgeWashingtonMouse.png
 GlassCup.png
 Grater.png
 Griddle.png
@@ -22,7 +21,6 @@ Mug.png
 PizzaStone.png
 PlasticContainers.png
 PyrexContainers.png
-ReptilianJoeBiden.png
 RiceCooker.png
 RollingPin.png
 Spatula.png
