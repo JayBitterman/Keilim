@@ -1,0 +1,198 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+  
+.card{
+    width: 25%;
+    height: 33%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+  
+.card-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    margin-bottom: 10px;
+}
+  
+.card-description{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+}
+
+section{
+    padding-left: 30px;
+}
+
+.photo{
+    float: right;
+    height: 30%;
+    width: 30%;
+    margin: 10px;
+}
+
+#searchBar{
+    width: 40%;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.285);
+    padding: .7em;
+    margin: 0.5em;
+    font-size: 1.4em;
+    border-radius: 30px;
+    border: 5px;
+    font-family: "Times New Roman";
+}
+
+#no-results{
+    font-size: 3em;
+    font-family: sans-serif;
+    display: none;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    background: #4e3ceaeb;
+}
+  
+nav ul{
+    display: flex;
+    justify-content: center; 
+    list-style-type:none;
+
+}
+
+nav a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    /* color: #000; */
+}
+  
+  
+nav ul li{
+    margin: 0 50px 0 0;
+}
+    
+nav ul li a{
+    font-size: 1.4em;
+    padding: 0;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+  
+nav ul li a:hover{
+    opacity:0.6;
+}
+  
+nav ul li ul{
+    display:none;
+    position: absolute;
+    background: rgba(245, 58, 58, 0.934);
+    padding: 0;
+    border-radius: 10px;
+}
+  
+nav ul li ul li{
+    border-bottom:2px solid rgba(255,255,255,.3);
+    padding: 10px;
+
+}
+  
+nav ul li:hover ul{
+    display:block;
+}
+
+
+@media screen and (max-width: 480px){
+  .card {
+    width: 25%;
+    height: auto;
+    margin: 10px;
+  }
+
+  #searchBar{
+    width: 250px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.285);
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 5px;
+    font-family: "Times New Roman";
+  }
+
+  .card-title{
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a{
+    font-size: 18px;
+    padding: 0;
+  }
+  
+}
+
+/* @media screen and (max-width: px){
+    .card {
+      width: 25%;
+      height: auto;
+      margin: 10px;
+    }
+  
+    #searchBar{
+      width: 250px;
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.285);
+      padding: 0.5em;
+      margin: 0.5em;
+      font-size: 1em;
+      border-radius: 10px;
+      border: 5px;
+      font-family: "Times New Roman";
+    }
+  
+    .card-title{
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    nav ul li a{
+      font-size: 18px;
+      padding: 0;
+    }
+    
+  }
+   */

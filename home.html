@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="WashingCup.png">
+    <title>Keilim</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+  </head>
+  <body>
+
+    <main>
+
+    <nav>
+        <ul>            
+            <li><a href="#">Material</a>
+              <ul>
+                  <li><a href="#">Metal</a></li>
+                  <li><a href="#">Plastic</a></li>
+                  <li><a href="#">Ceramic</a></li>
+                  <li><a href="#">Wood</a></li>
+                  <li><a href="#">Porcelan/Eartheware</a></li>
+                  <li><a href="#">Pyrex</a></li>
+                  <li><a href="#">China/Stoneware</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Hilchos Tevilah</a>
+              <ul>
+                <li><a href="materialinfo.html">Materials Requiring Tevilah</a></li>
+                <li><a href="utensilinfo.html">Utensils Requiring Tevilah</a></li>
+              </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="input">
+        <input type="text" id="searchBar" placeholder="Search for Keilim" autocomplete="off" autofocus="true">
+    </div>
+    <div class="container" id="Content">
+
+    <script language="javascript" type="text/javascript">
+
+    const path = 'https://raw.githubusercontent.com/JayBitterman/Keilim/main/picNames.txt';
+    const path2 = 'https://raw.githubusercontent.com/JayBitterman/Keilim/main/pics/';
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', path, false); 
+    xhr.onload = function(){
+      if(xhr.status === 200){
+        const filenames = xhr.responseText.split("\n");
+        for(let i = 0; i < filenames.length - 1; i ++){
+          let itemName = filenames[i].substring(0, filenames[i].indexOf("."));
+          for(let j = 1; j < itemName.length; j ++){
+            if(itemName[j].toUpperCase() === itemName[j] && itemName[j-1] != " "){
+              itemName = itemName.substring(0, j) + " " + itemName.substring(j);
+            }
+          }
+          document.write(`<div class=card id="card${i}"><img src=${path2 + filenames[i]} class=card-image> <h3 class='card-title'>${itemName}</h3> </div>`);
+          document.getElementById("card" + i.toString()).addEventListener("click", ()=>{
+            var params = new URLSearchParams();
+            params.append("item", itemName);
+            params.append("photo", path2 + filenames[i]);
+            window.location.href = "items.html?" + params.toString();
+          });
+        }
+      }
+      else{
+        console.error('Request failed. Status:', xhr.status);
+      }
+    };
+
+    xhr.send();
+
+        </script>
+        <div>
+            <label id="no-results">No Results Found</label>
+        </div>
+    </div>
+    </main>
+    <script src="web.js"></script>
+  </body>
+</html>

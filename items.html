@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="WashingCup.png">
+    <title>Keilim</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+  </head>
+  <body>
+
+    <main>
+
+        <nav>
+            <ul> 
+                <li><a href="#">Material</a>
+                    <ul>
+                        <li><a href="#Metal">Metal</a></li>
+                        <li><a href="#Plastic">Plastic</a></li>
+                        <li><a href="#Ceramic">Ceramic</a></li>
+                        <li><a href="#Wood">Wood</a></li>
+                        <li><a href="#PorcelanEartheware">Porcelan/Eartheware</a></li>
+                        <li><a href="#Pyrex">Pyrex</a></li>
+                        <li><a href="#ChinaStoneware">China/Stoneware</a></li>
+                    </ul>
+                </li>                                                    
+                <li><a href="home.html">Back to Home</a></li>                    
+            </ul>
+        </nav>
+    <div id="info">
+        <script>
+            var params = new URLSearchParams(window.location.search);
+            var item = params.get("item");
+            var photo = params.get("photo");
+
+            document.write(`<section id="${item}">
+            <h1>${item}</h1>
+            <img class='photo' src=${photo}></img>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>`);
+        </script>
+
+        <section id="Metal">
+            <h1>Metal</h1>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>
+
+        <section id="Plastic">
+            <h1>Plastic</h1>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>
+
+        <section id="Ceramic">
+            <h1>Ceramic</h1>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>
+
+        <section id="Wood">
+            <h1>Wood</h1>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>
+
+        <section id="PorcelanEartheware">
+            <h1>Porcelan/Eartheware</h1>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>
+
+        <section id="Pyrex">
+            <h1>Pyrex</h1>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>
+
+        <section id="Teflon">
+            <h1>Teflon</h1>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>
+
+        <section id="ChinaStoneware">
+            <h1>China/Stoneware</h1>
+            <p>A lot of Info A lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of InfoA lot of Info</p>
+        </section>
+    </div>
+
+    </main>
+
+  </body>
+</html>
