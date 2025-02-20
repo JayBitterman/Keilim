@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="Cup.png">
+  <title>Tevilas Keilim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Tevilas Keilim</div>
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <a href="#">Materials</a>
+          <ul class="dropdown-content">
+            <li><a href="#material/Metal">Metal</a></li>
+            <li><a href="#material/Glass">Glass</a></li>
+            <li><a href="#material/Ceramic">Ceramic</a></li>
+            <li><a href="#material/Wood">Wood</a></li>
+            <li><a href="#material/Plastic">Plastic</a></li>
+          </ul>
+        </li>
+        <li><a href="#general-laws">General Laws</a></li>
+        <li><a href="#multi-material">Multi-Material Keilim</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main id="content">
+    <!-- Home view: display cards and search -->
+    <section id="home-view" class="view active">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search items...">
+      </div>
+      <div class="cards-container" id="cardsContainer">
+        <!-- Cards are populated dynamically -->
+      </div>
+    </section>
+    
+    <!-- Detail view: for a single item -->
+    <section id="detail-view" class="view">
+      <button id="backButton" class="back-button">← Back</button>
+      <div id="detailContent">
+        <!-- Detailed content loaded dynamically -->
+      </div>
+    </section>
+    
+    <!-- Materials view: content for a specific material -->
+    <section id="materials-view" class="view">
+      <button id="backButtonMaterials" class="back-button">← Back</button>
+      <div id="materialsContent">
+        <h2>Materials Information</h2>
+        <p>Information about the selected material will appear here.</p>
+      </div>
+    </section>
+    
+    <!-- General Laws view -->
+    <section id="general-laws-view" class="view">
+      <button id="backButtonGeneral" class="back-button">← Back</button>
+      <div id="generalContent">
+        <h2>General Laws of Tevilas Keilim</h2>
+        <p>Content regarding the general laws will be provided here.</p>
+      </div>
+    </section>
+    
+    <!-- Multi-Material Keilim view -->
+    <section id="multi-material-view" class="view">
+      <button id="backButtonMulti" class="back-button">← Back</button>
+      <div id="multiMaterialContent">
+        <h2>Multi-Material Keilim</h2>
+        <p>Instructions for items composed of multiple materials will appear here.</p>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Load the dictionary (items) then the main script -->
+  <script src="items.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

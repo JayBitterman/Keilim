@@ -1,0 +1,202 @@
+/* Global resets and typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  
+  /* Dropdown menu styling */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4CAF50;
+    min-width: 120px;
+    z-index: 1;
+    list-style: none;
+    padding: 5px 0;
+  }
+  
+  .dropdown-content li a {
+    display: block;
+    padding: 5px 10px;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Search bar */
+  .search-bar {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .search-bar input {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  /* Cards grid layout */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding-left: 20px;
+  }
+  
+  .card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .card-content p {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  /* More information icon styling */
+  .more-info {
+    font-size: 1.1em;
+    color: #888;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  /* View sections */
+  .view {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+    min-height: calc(100vh - 60px);
+    background-color: #fff;
+    padding-bottom: 20px;
+  }
+  
+  .view.active {
+    display: block;
+  }
+  
+  /* Back button */
+  .back-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .search-bar input {
+      width: 90%;
+    }
+  }
+  
